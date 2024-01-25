@@ -1,5 +1,5 @@
 import Image from "next/image";
-import chili from "../images/chili.svg";
+import chili from "@/images/chili.svg";
 
 const Nav = () => {
   return (
