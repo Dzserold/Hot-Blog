@@ -1,17 +1,20 @@
 import Image from "next/image";
-import { typePost } from "./types";
+import { typePost } from "../types";
 
 const Post = (post: typePost) => {
   return (
-    <section>
+    <div key={post.id} className="flex ">
       <Image
         src={post.photo_url}
-        width={100}
-        height={100}
+        width={200}
+        height={200}
         alt={post.title + " image"}
       />
-      <h1>{post.title}</h1>
-    </section>
+      <div className="ml-2 self-center">
+        <h1>{post.title}</h1>
+        <p className="text-sm">{post.content_text.substring(0, 200)}...</p>
+      </div>
+    </div>
   );
 };
 
