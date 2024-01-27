@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Nav = () => {
   return (
-    <nav className="flex row justify-between p-1">
+    <nav className="flex row justify-between p-3 max-w-5xl mx-auto">
       <div className="flex row p-1">
         <Image src={chili} height={30} width={30} alt="chili logo" />
         <h1 className="text-red-500 text-3xl ml-1">

@@ -3,4 +3,5 @@ export interface typePost {
   id: number;
   title: string;
   photo_url: string;
+  category: string;
 }

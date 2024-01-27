@@ -7,14 +7,16 @@ export default async function page() {
   console.log(data);
 
   return (
-    <section className="flex-col gap-2">
+    <section className="flex-col max-w-5xl mx-auto align-middle">
+      <h2 className="custom-gradiant">Read our blog posts</h2>
       {data.map((data: typePost) => {
         return (
           <Post
             id={data.id}
             title={data.title}
             photo_url={data.photo_url}
-            content_text={data.content_text}
+            content_text={data.content_text.substring(0, 240)}
+            category={data.category}
           />
         );
       })}
