@@ -1,10 +1,8 @@
-"use client";
 import { fetchPosts } from "@/lib/data";
 import Post from "@/lib/component/Post";
 import { typePost } from "@/lib/types";
 export default async function page() {
   const data = await fetchPosts();
-  console.log(data);
 
   return (
     <section className="flex-col max-w-5xl mx-auto align-middle">
@@ -12,6 +10,7 @@ export default async function page() {
       {data.map((data: typePost) => {
         return (
           <Post
+            key={data.id}
             id={data.id}
             title={data.title}
             photo_url={data.photo_url}

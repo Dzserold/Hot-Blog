@@ -6,7 +6,14 @@ const Nav = () => {
   return (
     <nav className="flex row justify-between p-3 max-w-5xl mx-auto">
       <div className="flex row p-1">
-        <Image src={chili} height={30} width={30} alt="chili logo" />
+        <Image
+          placeholder="empty"
+          className="w-8 h-8"
+          src={chili}
+          height={0}
+          width={0}
+          alt="chili logo"
+        />
         <h1 className="text-red-500 text-3xl ml-1">
           Hot<span className="text-blue-400">Blog</span>
         </h1>

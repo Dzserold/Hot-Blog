@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { typePost } from "../types";
+import Link from "next/link";
 
 const Post = (post: typePost) => {
   return (
@@ -18,9 +19,11 @@ const Post = (post: typePost) => {
         <h3 className="text-lg text-blue-400">{post.title}</h3>
         <h4 className="text-red-500">Category: {post.category}</h4>
         <p className="text-sm">{post.content_text}...</p>
-        <button className="bg-blue-200 text-blue-600 p-1 text-lg font-medium">
-          Read more
-        </button>
+        <Link href={post.id.toString()}>
+          <button className="bg-blue-200 hover:bg-red-300 text-blue-600 p-1 text-lg font-medium">
+            Read more
+          </button>
+        </Link>
       </div>
     </div>
   );
