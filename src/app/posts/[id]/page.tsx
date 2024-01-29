@@ -21,6 +21,7 @@ const page = async ({ params }: { params: { id: number } }) => {
 
       <div className="ml-2 self-center ">
         <p className="text-sm px-5 ">{post.content_text}...</p>
+        <p>{post.updated_at.substring(0, 10).replace("-", ".")}</p>
       </div>
     </article>
   );
