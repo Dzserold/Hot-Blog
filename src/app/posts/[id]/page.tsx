@@ -2,9 +2,10 @@
 import { fetchPostById } from "@/lib/data";
 import Image from "next/image";
 
-const page = async () => {
-  const post = await fetchPostById(1);
-  console.log(post);
+const page = async ({ params }: { params: { id: number } }) => {
+  const id = params.id;
+  const post = await fetchPostById(id);
+
   return (
     <article className=" text-center max-w-5xl mx-auto">
       <h1 className="text-3xl text-blue-400">{post.title}</h1>
