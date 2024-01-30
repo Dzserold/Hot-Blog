@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Nav = () => {
   return (
-    <nav className="flex row justify-between p-3 max-w-5xl mx-auto">
+    <nav className="bg-zinc-950 flex row justify-between p-3 max-w-5xl mx-auto">
       <div className="flex row p-1">
         <Image
           placeholder="empty"

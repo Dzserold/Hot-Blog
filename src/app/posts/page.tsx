@@ -6,7 +6,7 @@ export default async function page() {
 
   return (
     <section className="flex-col max-w-5xl mx-auto align-middle">
-      <h2 className="custom-gradiant">Read our blog posts</h2>
+      <h2 className="custom-gradiant p-4">Read our blog posts</h2>
       {data.map((data: typePost) => {
         return (
           <Post

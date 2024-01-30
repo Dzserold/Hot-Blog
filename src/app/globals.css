@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background: #111;
+  background: #161616;
   color: #f4f4f4;
 }
 
@@ -25,4 +25,8 @@ body {
   height: 5px;
   border-radius: 5px;
   background: linear-gradient(90deg, rgb(239 68 68) 20%, rgb(96 165 250) 100%);
+}
+
+.custom-border {
+  border-top: 0.3rem solid rgb(96 165 250);
 }
