@@ -2,7 +2,7 @@ import { fetchPosts } from "@/lib/data";
 import Post from "@/lib/component/Post";
 import { typePost } from "@/lib/types";
 export default async function page() {
-  const data = await fetchPosts();
+  const data = await fetchPosts(25);
 
   return (
     <section className="flex-col max-w-5xl mx-auto align-middle">

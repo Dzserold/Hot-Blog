@@ -1,13 +1,43 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { fetchPosts } from "../data";
 
-const Search = () => {
+interface Post {
+  category: string;
+  title: string;
+  content_text: string;
+}
+
+export default function Search() {
   const [search, setSearch] = useState("");
+  const [data, setData] = useState([]);
+  const [result, setResult] = useState([]);
+
+  const fetchData = async () => {
+    const posts = await fetchPosts(200);
+    setData(posts);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   function updateSearch(e: string) {
     setSearch(e);
-    console.log(search);
+    setResult(filterPost(search));
+    console.log(result);
   }
+
+  const filterPost = (searchtext: string) => {
+    const regex = new RegExp(searchtext, "i");
+
+    return data.filter(
+      (search: Post) =>
+        regex.test(search.category) ||
+        regex.test(search.title) ||
+        regex.test(search.content_text)
+    );
+  };
 
   return (
     <div>
@@ -18,9 +48,9 @@ const Search = () => {
         value={search}
         onChange={(e) => updateSearch(e.target.value)}
       />
-      <h1>{search}</h1>
+      <div>
+        <h1>{search}</h1>
+      </div>
     </div>
   );
-};
-
-export default Search;
+}

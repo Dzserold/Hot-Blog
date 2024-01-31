@@ -1,7 +1,7 @@
-export const fetchPosts = async () => {
+export const fetchPosts = async (quantity: number) => {
   try {
     const data = await fetch(
-      `https://api.slingacademy.com/v1/sample-data/blog-posts?offset=0&limit=${10}`
+      `https://api.slingacademy.com/v1/sample-data/blog-posts?offset=0&limit=${quantity}`
     ).then((response) => response.json());
 
     const posts = await data.blogs;
