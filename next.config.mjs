@@ -2,7 +2,13 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["api.slingacademy.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "api.slingacademy.com",
+        pathname: "**",
+      },
+    ],
   },
 };
 
