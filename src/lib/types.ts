@@ -1,7 +1,14 @@
 export interface typePost {
-  content_text: string;
   id: number;
   title: string;
-  photo_url: string;
   category: string;
+  content_text: string;
+  photo_url: string;
+}
+
+export interface typePostCard {
+  id: number;
+  title: string;
+  category: string;
+  content_text: string;
 }

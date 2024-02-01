@@ -18,7 +18,7 @@ const Post = (post: typePost) => {
       <div className="ml-2 self-center">
         <h3 className="text-lg text-blue-400">{post.title}</h3>
         <h4 className="text-red-500">Category: {post.category}</h4>
-        <p className="text-sm">{post.content_text}...</p>
+        <p className="text-sm">{post.content_text}</p>
         <Link href={"posts/" + post.id.toString()}>
           <button className="bg-blue-200 hover:bg-red-300 text-blue-600 p-1 mt-1 text-lg font-medium">
             Read more

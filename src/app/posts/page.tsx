@@ -14,7 +14,7 @@ export default async function page() {
             id={data.id}
             title={data.title}
             photo_url={data.photo_url}
-            content_text={data.content_text.substring(0, 240)}
+            content_text={`${data.content_text.substring(0, 240)}...`}
             category={data.category}
           />
         );
