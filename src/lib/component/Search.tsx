@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { fetchPosts } from "../data";
-import PostCard from "./SearchPost";
+import PostCard from "./PostCard";
 import { typePostCard } from "../types";
 
 export default function Search() {
@@ -33,10 +33,11 @@ export default function Search() {
   const filterPost = (searchtext: string) => {
     const regex = new RegExp(searchtext, "i");
 
-    return data.filter(
+    const found = data?.filter(
       (search: typePostCard) =>
         regex.test(search.category) || regex.test(search.title)
     );
+    return found;
   };
 
   return (
@@ -50,17 +51,18 @@ export default function Search() {
         />
       </div>
       <article className="grid sm:grid-cols-2 gap-3 max-w-5xl mx-auto mt-7 p-3">
-        {results.map((result: typePostCard) => {
-          return (
-            <PostCard
-              key={result.id}
-              id={result.id}
-              title={result.title}
-              category={result.category}
-              content_text={`${result.content_text.substring(0, 100)}...`}
-            />
-          );
-        })}
+        {results &&
+          results.map((result: typePostCard) => {
+            return (
+              <PostCard
+                key={result.id}
+                id={result.id}
+                title={result.title}
+                category={result.category}
+                content_text={`${result.content_text.substring(0, 100)}...`}
+              />
+            );
+          })}
       </article>
     </section>
   );
