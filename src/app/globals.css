@@ -27,10 +27,13 @@ body {
   background: linear-gradient(90deg, rgb(239 68 68) 20%, rgb(96 165 250) 100%);
 }
 
-.custom-border {
+.customBorder {
   border-top: 0.3rem solid rgb(96 165 250);
 }
 
+.customBorder-nav {
+  border-bottom: 0.3rem solid rgb(96 165 250);
+}
 .custom_input {
   background: url("../images/magnifying-glass.svg") center right 5px no-repeat;
   background-color: rgba(118, 172, 238, 0.96);

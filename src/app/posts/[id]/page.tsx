@@ -7,7 +7,7 @@ const page = async ({ params }: { params: { id: number } }) => {
   const post = await fetchPostById(id);
 
   return (
-    <article className=" text-center max-w-5xl mx-auto">
+    <article className=" text-center max-w-5xl mx-auto pt-4">
       <h1 className="text-3xl text-blue-400">{post.title}</h1>
       <h4 className="text-xl text-red-500">Category: {post.category}</h4>
 

@@ -22,7 +22,9 @@ export default function Search() {
     const searchResult = filterPost(search);
     if (search === "") {
       setResult([]);
-    } else setResult(searchResult);
+    } else {
+      setResult(searchResult);
+    }
   }, [search]);
 
   function updateSearch(e: string) {

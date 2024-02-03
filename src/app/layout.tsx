@@ -22,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Nav />
-        {children}
-        <Footer />
+        <main className="flex flex-col justify-between min-h-screen">
+          <Nav />
+          {children}
+          <Footer />
+        </main>
       </body>
     </html>
   );
