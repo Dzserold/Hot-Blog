@@ -29,7 +29,6 @@ export default function Search() {
 
   function updateSearch(e: string) {
     setSearch(e);
-    console.log(search);
   }
 
   const filterPost = (searchtext: string) => {
@@ -57,6 +56,7 @@ export default function Search() {
           results.map((result: typePostCard) => {
             return (
               <PostCard
+                query={search}
                 key={result.id}
                 id={result.id}
                 title={result.title}

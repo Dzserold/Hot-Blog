@@ -11,4 +11,5 @@ export interface typePostCard {
   title: string;
   category: string;
   content_text: string;
+  query: string;
 }
