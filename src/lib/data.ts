@@ -1,3 +1,4 @@
+//Fetching a specific amount of post by geting the wanted quantity
 export const fetchPosts = async (quantity: number) => {
   try {
     const data = await fetch(
@@ -11,6 +12,7 @@ export const fetchPosts = async (quantity: number) => {
   }
 };
 
+//Fetching post from the api by geting specific post ID
 export const fetchPostById = async (id: number) => {
   try {
     const data = await fetch(

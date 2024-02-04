@@ -1,7 +1,7 @@
-import { Span } from "next/dist/trace";
 import { typePostCard } from "../types";
 import Link from "next/link";
 
+// This function shows the post Card in the user searches for Posts
 export default function PostCard(data: typePostCard) {
   function getHighlightedText(text: string, highlight: string) {
     // Split on highlight term and include term into parts, ignore case

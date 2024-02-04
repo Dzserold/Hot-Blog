@@ -2,6 +2,7 @@ import Image from "next/image";
 import { typePost } from "../types";
 import Link from "next/link";
 
+// Post component on the Posts page
 const Post = (post: typePost) => {
   return (
     <div
