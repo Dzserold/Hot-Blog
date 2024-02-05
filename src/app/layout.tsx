@@ -25,8 +25,10 @@ export default function RootLayout({
         {/* Making the whole page flex so the Navbar and the Footer allways 
         on their place even if page conent is empty */}
         <main className="flex flex-col justify-between min-h-screen">
-          <Nav />
-          {children}
+          <div>
+            <Nav />
+            {children}
+          </div>
           <Footer />
         </main>
       </body>

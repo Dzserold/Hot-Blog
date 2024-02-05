@@ -43,7 +43,7 @@ export default function Search() {
 
   return (
     <section>
-      <div className="w-screen flex justify-center">
+      <div className="max-w-screen flex justify-center">
         <input
           className="custom_input"
           placeholder="Search posts title or category"
@@ -51,7 +51,7 @@ export default function Search() {
           onChange={(e) => updateSearch(e.target.value)}
         />
       </div>
-      <article className="grid sm:grid-cols-2 gap-3 max-w-5xl mx-auto mt-7 p-3">
+      <article className="max-w-screen grid sm:grid-cols-2 gap-3 mx-auto mt-7 p-3">
         {results &&
           results.map((result: typePostCard) => {
             return (
