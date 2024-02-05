@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <article className="max-w-5xl mx-auto p-10">
+    <article className="max-w-5xl p-10 mx-auto">
       HotBlog
       <br />
       <h4>About</h4>

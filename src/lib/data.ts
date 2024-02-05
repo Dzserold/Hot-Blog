@@ -6,6 +6,7 @@ export const fetchPosts = async (quantity: number) => {
     ).then((response) => response.json());
 
     const posts = await data.blogs;
+
     return posts;
   } catch (error) {
     console.log(error);

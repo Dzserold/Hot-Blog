@@ -3,7 +3,7 @@ import githubLogo from "@/images/github.svg";
 
 const Footer = () => {
   return (
-    <footer className="customBorder bg-zinc-950  flex flex-col justify-center items-center bg-bg p-2">
+    <footer className="flex flex-col items-center justify-center p-2 customBorder bg-zinc-950 bg-bg">
       <div className="flex flex-row ">
         <h3 className="inline-block">Fábián Dzserold</h3>
         <a className="inline-block" href="https://github.com/Dzserold">
