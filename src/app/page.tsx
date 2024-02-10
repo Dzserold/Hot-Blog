@@ -1,6 +1,6 @@
-import Search from "@/lib/component/Search";
+import Search from "@/component/Search";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="">
       <div className="flex justify-center mt-7">

@@ -1,4 +1,4 @@
-import { typePostCard } from "../types";
+import { typePostCard } from "../lib/types";
 import Link from "next/link";
 
 // This function shows the post Card in the user searches for Posts

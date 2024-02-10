@@ -1,5 +1,5 @@
 import { fetchPosts } from "@/lib/data";
-import Post from "@/lib/component/Post";
+import Post from "@/component/Post";
 import { typePost } from "@/lib/types";
 import { Suspense } from "react";
 import Loading from "./loading";

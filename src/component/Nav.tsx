@@ -8,14 +8,7 @@ const Nav = () => {
       <div className="flex justify-between max-w-5xl p-3 mx-auto row">
         <Link href="/">
           <div className="flex p-1 row">
-            <Image
-              placeholder="empty"
-              className="w-8 h-8"
-              src={chili}
-              height={0}
-              width={0}
-              alt="chili logo"
-            />
+            <Image src={chili} height={30} width={30} alt="chili logo" />
             <h1 className="ml-1 text-3xl text-red-500">
               Hot<span className="text-blue-400">Blog</span>
             </h1>

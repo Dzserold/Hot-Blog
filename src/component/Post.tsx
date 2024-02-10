@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { typePost } from "../types";
+import { typePost } from "../lib/types";
 import Link from "next/link";
 
 // Post component on the Posts page
