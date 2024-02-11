@@ -10,9 +10,9 @@ export default async function page() {
   return (
     <section className="max-w-5xl px-8 mx-auto">
       <h2 className="p-4 custom-gradiant">Read our blog posts</h2>
-      {data.map((data: typePost) => {
-        return (
-          <Suspense fallback={<Loading />}>
+      <Suspense fallback={<Loading />}>
+        {data.map((data: typePost) => {
+          return (
             <Post
               key={data.id}
               id={data.id}
@@ -21,9 +21,9 @@ export default async function page() {
               content_text={`${data.content_text.substring(0, 240)}...`}
               category={data.category}
             />
-          </Suspense>
-        );
-      })}
+          );
+        })}
+      </Suspense>
     </section>
   );
 }

@@ -19,8 +19,8 @@ export default function Page() {
         experience by bookmarking favorites and creating reading lists. Getting
         Started Clone the repository. Install dependencies with npm install. Run
         the app with npm run dev. Explore, connect, and enjoy the world of
-        HotBlog Hub! Contributing We welcome contributions! If you'd like to
-        contribute, please follow our Contribution Guidelines.
+        HotBlog Hub! Contributing We welcome contributions! If you&apos;d like
+        to contribute, please follow our Contribution Guidelines.
       </p>
     </article>
   );

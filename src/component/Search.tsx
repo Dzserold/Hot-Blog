@@ -33,8 +33,18 @@ export default function Search() {
   }, []);
 
   useEffect(() => {
+    const filterPost = (searchtext: string) => {
+      const regex = new RegExp(searchtext, "i");
+
+      const found = data?.filter(
+        (search: typePostCard) =>
+          regex.test(search.category) || regex.test(search.title)
+      );
+      return found;
+    };
+
     const searchResult = filterPost(search);
-    console.log(results);
+
     if (search === "" || search === " ") {
       setResults([]);
       setIsSearch(false);
@@ -45,21 +55,11 @@ export default function Search() {
         setIsSearch(true);
       }
     }
-  }, [search]);
+  }, [search, results]);
 
   function updateSearch(e: string) {
     setSearch(e);
   }
-
-  const filterPost = (searchtext: string) => {
-    const regex = new RegExp(searchtext, "i");
-
-    const found = data?.filter(
-      (search: typePostCard) =>
-        regex.test(search.category) || regex.test(search.title)
-    );
-    return found;
-  };
 
   return (
     <section>
