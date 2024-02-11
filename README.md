@@ -2,6 +2,9 @@ HotBlog
 About
 HotBlog Hub is a Next.js-powered application that brings you a curated collection of blogs sourced from an open API. Stay up-to-date with the latest and greatest content across various topics.
 
+You can find this website in the following link:
+https://hot-blog.vercel.app/
+
 Features
 📖 Explore engaging blogs from diverse categories.
 🌐 Powered by Next.js for a fast and responsive web experience.
