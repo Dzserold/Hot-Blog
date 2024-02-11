@@ -8,7 +8,7 @@ export default async function page() {
   const data = await fetchPosts(30);
 
   return (
-    <section className="flex-col max-w-5xl mx-auto align-middle">
+    <section className="max-w-5xl px-8 mx-auto">
       <h2 className="p-4 custom-gradiant">Read our blog posts</h2>
       {data.map((data: typePost) => {
         return (

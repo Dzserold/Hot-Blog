@@ -16,7 +16,7 @@ const Nav = () => {
         </Link>
         <ul className="flex text-xl cursor-pointer row">
           <Link href="/">
-            <li className="p-2 text-blue-400  hover:text-red-500">Home</li>
+            <li className="p-2 text-blue-400 hover:text-red-500">Home</li>
           </Link>
           <Link href="/posts">
             <li className="p-2 text-blue-400 hover:text-red-500">Posts</li>
